@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
@@ -8,5 +9,6 @@ module.exports = {
     '!src/pages/**/*.tsx',
     '!src/styles/**/*.ts'
   ],
-  setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts']
+  setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
+  transform: { '.+\\.ts$': 'ts-jest' }
 }
