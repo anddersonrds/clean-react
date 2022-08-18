@@ -9,6 +9,7 @@
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "test": "jest",
     "test:watch": "yarn test --watch",
+    "test:staged": "yarn test --findRelatedTests --bail",
     "test:ci": "yarn test --coverage"
   },
   "husky": {
@@ -20,7 +21,7 @@
   "lint-staged": {
     "src/**/*": [
       "yarn lint --fix",
-      "yarn test --findRelatedTests --bail"
+      "yarn test:staged"
     ]
   },
   "devDependencies": {
