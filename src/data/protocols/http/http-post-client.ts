@@ -1,6 +1,5 @@
-import { HttpResponse } from '@/data/protocols/http/http-response'
+import { HttpResponse } from '@/data/protocols/http'
 
-/* eslint-disable @typescript-eslint/ban-types */
 export type HttpPostParams<T> = {
   url: string
   body?: T

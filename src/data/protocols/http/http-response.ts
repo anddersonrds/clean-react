@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 export enum HttpStatusCode {
   ok = 200,
   noContent = 204,
