@@ -1,10 +1,14 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-  testEnvironment: 'jsdom',
-  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
+  roots: ['<rootDir>/src'],
+  testEnvironment: 'node',
+  testPathIgnorePatterns: ['/node_modules/'],
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.ts(x)?'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.{ts,tsx}'],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   transform: { '.+\\.ts$': 'ts-jest' },
-  moduleNameMapper: { '@/(.*)': '<rootDir>/src/$1' }
+  moduleNameMapper: {
+    '@/(.*)': '<rootDir>/src/$1',
+    '^axios$': require.resolve('axios')
+  }
 }
