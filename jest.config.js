@@ -4,11 +4,12 @@ module.exports = {
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/'],
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/src/**/*.{ts,tsx}'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.{ts,tsx}', '!**/*.d.ts'],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   transform: { '.+\\.(ts|tsx)$': 'ts-jest' },
   moduleNameMapper: {
     '@/(.*)': '<rootDir>/src/$1',
+    '\\.scss$': 'identity-obj-proxy',
     '^axios$': require.resolve('axios')
   }
 }
