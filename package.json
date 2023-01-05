@@ -5,9 +5,10 @@
   "author": "Anderson Rodrigues <anddersonrds@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "webpack-dev-server --open",
     "lint": "eslint src --max-warnings=0",
     "typecheck": "tsc --project tsconfig.json --noEmit",
-    "test": "jest",
+    "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "yarn test --watch",
     "test:staged": "yarn test --findRelatedTests --bail",
     "test:ci": "yarn test --coverage"
@@ -36,6 +37,7 @@
     "@types/react-dom": "^18.0.10",
     "@typescript-eslint/eslint-plugin": "^4.21.0",
     "@typescript-eslint/parser": "^4.21.0",
+    "clean-webpack-plugin": "^4.0.0",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
