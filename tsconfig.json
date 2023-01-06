@@ -10,12 +10,13 @@
     "module": "esnext",
     "moduleResolution": "node",
     "jsx": "react",
-    "rootDir": "src",
+    "rootDirs": ["src"],
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"],
     },
     "allowJs":true,
     "resolveJsonModule": true,
-  }
+  },
+  "include": ["src"]
 }
