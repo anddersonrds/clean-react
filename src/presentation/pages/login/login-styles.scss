@@ -64,17 +64,5 @@ button {
         text-decoration: underline  ;
       }
     }
-
-    .errorWrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 28px;
-      gap: 16px;
-
-      .error {
-        color: $primaryLight;
-      }
-    }
   }
 }
