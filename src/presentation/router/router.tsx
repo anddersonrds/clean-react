@@ -7,7 +7,7 @@ import { Login } from '@/presentation/pages'
 export const Router: React.FC = () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/login/" exact component={Login} />
+      <Route path="/login" exact component={Login} />
     </Switch>
   </BrowserRouter>
 )
